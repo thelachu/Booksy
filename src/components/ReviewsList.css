@@ -1,0 +1,348 @@
+.reviews-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* BACKDROP */
+
+.reviews-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* MODAL */
+
+.reviews-modal {
+  position: relative;
+  width: 100%;
+  max-width: 48rem;
+  max-height: 85vh;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* HEADER */
+
+.reviews-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  padding: 1.5rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.reviews-book-image {
+  width: 5rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.reviews-book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviews-book-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.reviews-book-author {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 0.25rem;
+}
+
+.reviews-book-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.5rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* RATING */
+
+.reviews-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.reviews-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.reviews-star {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.reviews-star-filled {
+  color: white;
+  fill: white;
+}
+
+.reviews-star-empty {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.reviews-rating-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* CLOSE BUTTON */
+
+.reviews-close-btn {
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.reviews-close-btn:hover {
+  color: white;
+}
+
+.reviews-close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* CONTENT */
+
+.reviews-content {
+  padding: 1.5rem;
+
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+/* WRITE REVIEW BUTTON */
+
+.reviews-write-btn {
+  width: 100%;
+
+  padding: 0.65rem 0;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+
+  transition: all 0.25s ease;
+}
+
+.reviews-write-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* FORM */
+
+.reviews-form {
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  animation: fadeUp 0.3s ease-out;
+}
+
+.reviews-form-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* STAR BUTTONS */
+
+.reviews-form-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.reviews-form-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.reviews-form-star {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.15s;
+}
+
+.reviews-form-star-btn:hover .reviews-form-star {
+  transform: scale(1.1);
+}
+
+/* TEXTAREA */
+
+.reviews-form-textarea {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+
+  font-size: 0.9rem;
+  color: white;
+
+  resize: none;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.reviews-form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.reviews-form-textarea:focus {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ACTION BUTTONS */
+
+.reviews-form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.reviews-submit-btn {
+  padding: 0.5rem 1.3rem;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.reviews-submit-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.reviews-submit-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.reviews-cancel-btn {
+  padding: 0.5rem 1.3rem;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+
+  background: transparent;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.reviews-cancel-btn:hover {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* EMPTY */
+
+.reviews-empty {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 2rem 0;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

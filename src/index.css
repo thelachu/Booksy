@@ -1,0 +1,14 @@
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+
+  --secondary: #262626;
+  --border: #262626;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 20px;
+}

@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+.addbook-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* BACKGROUND BLUR */
+
+.addbook-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* MODAL */
+
+.addbook-modal {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+
+  border-radius: 12px;
+  padding: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* HEADER */
+
+.addbook-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 1.5rem;
+}
+
+.addbook-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* CLOSE BUTTON */
+
+.addbook-close-btn {
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.addbook-close-btn:hover {
+  color: white;
+}
+
+.addbook-close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* FORM */
+
+.addbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* LABEL */
+
+.addbook-label {
+  display: block;
+
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* INPUT */
+
+.addbook-input {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+
+  color: white;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.addbook-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.addbook-input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.addbook-textarea {
+  resize: none;
+}
+
+/* BUTTON AREA */
+
+.addbook-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+/* SUBMIT */
+
+.addbook-submit-btn {
+  padding: 0.65rem 1.3rem;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.addbook-submit-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.addbook-submit-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* CANCEL */
+
+.addbook-cancel-btn {
+  padding: 0.65rem 1.3rem;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+
+  background: transparent;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.addbook-cancel-btn:hover {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

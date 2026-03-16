@@ -1,0 +1,184 @@
+.signin-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+
+  background: #f6f7f9;
+}
+
+/* container */
+
+.signin-container {
+  width: 100%;
+  max-width: 24rem;
+  animation: fadeUp 0.4s ease-out;
+}
+
+/* header */
+
+.signin-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.signin-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #111;
+  margin: 0 auto 1rem;
+}
+
+.signin-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.signin-subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* glass card */
+
+.signin-form {
+  border-radius: 14px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* error */
+
+.signin-error {
+  font-size: 0.875rem;
+  color: #b91c1c;
+  background: #ffe4e6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* labels */
+
+.signin-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* inputs */
+
+.signin-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+
+  color: #111;
+  outline: none;
+  box-sizing: border-box;
+
+  transition: border-color 0.2s;
+}
+
+.signin-input::placeholder {
+  color: #9ca3af;
+}
+
+.signin-input:focus {
+  border-color: #111;
+}
+
+/* password box */
+
+.signin-password-box {
+  position: relative;
+}
+
+.signin-show-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+
+  color: #6b7280;
+}
+
+.signin-show-btn:hover {
+  color: #111;
+}
+
+/* submit */
+
+.signin-submit {
+  width: 100%;
+
+  background: #111;
+  color: white;
+
+  padding: 0.65rem 0;
+
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+.signin-submit:hover {
+  background: #333;
+}
+
+/* toggle */
+
+.signin-toggle {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.signin-toggle-btn {
+  color: #111;
+  text-decoration: underline;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
